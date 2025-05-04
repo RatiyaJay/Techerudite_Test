@@ -58,10 +58,12 @@ exports.adminLogin = async (req, res) => {
 
   const user = await db.User.findOne({ where: { email } });
   if (!user) {
+    console.log("User not found");
     return res.status(404).json({ msg: "User not found" });
   }
 
   if (user.role !== "admin") {
+    console.log("You are not allowed to login from here");
     return res
       .status(403)
       .json({ msg: "You are not allowed to login from here" });
