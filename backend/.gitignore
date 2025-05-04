@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+
+
+# Logs
+logs
+*.log
+
+# OS-specific
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Auto detect text files and perform LF normalization
+* text=auto
